@@ -7,4 +7,4 @@ def index (request):
     return render(request,'pages/index.html',x)
 
 def about(request):
-    return HttpResponse('about page')
+    return render(request,'pages/about.html')
