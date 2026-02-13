@@ -2,6 +2,19 @@
 
 {% block content %}
 
-<h1> Index Page </h1>
+
+{% if  name == 'ali' %}
+
+<p> welcome </p>
+
+{% elif name == "mohamed" %}
+
+<p> Hello  </p>
+
+
+{% else %}
+    <p> Not Found</p>
+
+{% endif %}
 
 {% endblock  %}
