@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import datetime
 # Create your models here.
 
 class Product (models.Model):
@@ -22,3 +22,8 @@ class Product (models.Model):
     class Meta:   # meta class for some apply some feature like ordering , naming and other feature
         ordering = ['-price'] # minus for desc and without - is asc
 
+
+class Test (models.Model):
+    date = models.DateField()
+    time = models.TimeField(null=True)
+    created = models.DateTimeField(default=datetime.now)
