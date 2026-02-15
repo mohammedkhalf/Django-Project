@@ -5,7 +5,8 @@ from .models import Product
 def index(request):
     # print("data", Product.objects.get(id=2))
     # breakpoint()
-    x = {'pro':Product.objects.all().filter(price=12)}
+    pro = Product.objects.all()
+    x = {'pro':pro.exclude(price=200)}   # order by () and count() and exclude
     return render ( request,'products/index.html',x)
 
 # create show product
