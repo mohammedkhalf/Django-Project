@@ -20,9 +20,16 @@ class Product (models.Model):
     def __str__(self):
         return self.title    
     
+class Video (models.Model):
+        title = models.CharField(max_length=50, null=True)
+        
+        def __str__(self):
+           return self.title  
+    
 class User (models.Model):
     name = models.CharField(max_length=50, null=True)
     products = models.ForeignKey(Product, on_delete=models.CASCADE)
+    watch = models.ManyToManyField(Video,null=True)
     def __str__(self):
         return self.name
     
