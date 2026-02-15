@@ -2,14 +2,15 @@
 
 {% block content %}
 
-{% for x in pro  %}
+{% for x in pro %}
 
-  <h1> {{ x.name }} </h1>
-    <h1> {{ x.content }} </h1>
-        <h1> {{ x.price }} </h1>
-            <h1> {{ x.category }} </h1>
+<p> {{x.name}} </p>
+
+<p> {{x.price}} </p>
 
 {% endfor %}
+
+
 
 
 {% endblock content %} 
