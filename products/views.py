@@ -6,7 +6,7 @@ def index(request):
     # print("data", Product.objects.get(id=2))
     # breakpoint()
     pro = Product.objects.all()
-    x = {'pro':pro.exclude(price=200)}   # order by () and count() and exclude
+    x = {'pro':pro.exclude(name='test1')} 
     return render ( request,'products/index.html',x)
 
 # create show product
